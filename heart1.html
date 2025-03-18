@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="eng">
+	<head>
+		<title>heart</title>
+    <link rel="stylesheet" href="heart2.css">
+		<meta charset="utf-8">
+	</head>
+	<body>
+      <br>
+    <div id="obal">
+      <canvas id="c"></canvas>
+      <script>
+        var b = document.body;
+        var c = document.getElementsByTagName('canvas')[0];
+        var a = c.getContext('2d');
+        document.body.clientWidth; 
+      </script>
+    </div>
+     <!-- Background Music -->
+     <audio id="bg-music" autoplay loop>
+        <source src="Love story.mp3" type="audio/mpeg">
+    </audio>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let music = document.getElementById("bg-music");
+            music.volume = 0.5; // Set volume level
+            music.play().catch(error => {
+                console.log("Autoplay blocked. Waiting for user interaction.");
+                document.addEventListener("click", () => music.play(), { once: true });
+            });
+        });
+    </script>
+    <script src="script1.js"></script>
+  </body>
+      
+</html>
